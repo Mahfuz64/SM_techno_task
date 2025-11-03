@@ -3,7 +3,6 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../screens/home_page.dart';
-import '../controller/auth_controller.dart';
 
 class AuthController extends GetxController {
   // ----------------------------
@@ -97,7 +96,7 @@ class AuthController extends GetxController {
     try {
       // perform sign-in network call here
       await Future.delayed(const Duration(seconds: 1));
-      Get.toNamed('/location');
+      Get.offAllNamed('/enable_location');
       Get.snackbar("Welcome", "Logged in as ${emailController.text}");
       // navigate to home or whatever
     } finally {

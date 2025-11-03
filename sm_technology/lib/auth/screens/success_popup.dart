@@ -38,12 +38,7 @@ class SuccessPopup extends StatelessWidget {
                 width: double.infinity,
                 height: 50,
                 child: ElevatedButton(
-                  onPressed: () { 
-                  final controller = Get.find<AuthController>();
-                    controller.emailController.clear();
-                      controller.passwordController.clear();
-                      controller.confirmPasswordController.clear();
-  
+                  onPressed: () {
                       Get.back(); // close dialog
                       Get.offAllNamed('/signin'); // navigate to sign in
                 },

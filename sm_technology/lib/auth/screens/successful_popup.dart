@@ -40,11 +40,6 @@ class SuccessfulPopup extends StatelessWidget {
               child: RoundedButton(
                 label: "Continue",
                  onPressed: () { 
-                  final controller = Get.find<AuthController>();
-                    controller.emailController.clear();
-                      controller.passwordController.clear();
-                      controller.confirmPasswordController.clear();
-  
                       Get.back(); // close dialog
                       Get.offAllNamed('/signin'); // navigate to sign in
                 },
